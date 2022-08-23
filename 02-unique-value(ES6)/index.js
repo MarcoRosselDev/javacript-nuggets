@@ -24,3 +24,10 @@ const menu = [
     category: 'dinner'
   }
 ]
+
+// map - get all instances
+// new Set - narrow down
+// ['all', ...] - turn it  back to array
+
+const categories = ["all", ...new Set(menu.map((item) => item.category))];
+console.log(categories);
