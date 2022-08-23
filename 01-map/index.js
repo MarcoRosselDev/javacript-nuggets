@@ -27,7 +27,10 @@ const people = [
 const ages = people.map(() => {});
 console.log(ages); // [ undefined, undefined, undefined ]
 */
-const getAges = (a) => a.age * 2; 
+const div = document.querySelector('.li');
 
-const ages = people.map(getAges);
-console.log(ages);
+const names = people.map((person) => `<li>${person.name}</li>`);
+
+div.innerHTML = names.join(""); // esta parte del .join("") ahun no la entiendo
+// se que es para quitarle los signos y limpiar el array a imprimir en el DOM
+// pero me falta saber como funciona por detras a detalle
