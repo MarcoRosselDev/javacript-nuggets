@@ -27,8 +27,7 @@ const people = [
 const ages = people.map(() => {});
 console.log(ages); // [ undefined, undefined, undefined ]
 */
-const ages = people.map((a) => {
-  console.log(a);
-  return 'hello world';
-});
+const getAges = (a) => a.age * 2; 
+
+const ages = people.map(getAges);
 console.log(ages);
