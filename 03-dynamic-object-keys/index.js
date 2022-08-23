@@ -16,6 +16,7 @@ console.log(person["name"]);
 
 let appState = 'loading';
 let appState2 = 'started';
+let keyName = 'banana';
 const app = {
   [appState]: true,
   [appState2]: false
@@ -23,3 +24,19 @@ const app = {
 console.log(app);
 // con esto se puede cambiar el nombre clave de un objeto
 // bastante util
+
+app[keyName] = 'apple';
+console.log(app);
+
+const state = {
+  loading: true,
+  name: '',
+  job: ''
+}
+
+const updateState = (key, value) => state[key] = value;
+
+updateState('name', 'marco');
+updateState('job', 'arquitect & developer');
+
+console.log(state);
