@@ -23,5 +23,12 @@ const people = [
 // does not change the size of original array (unlike filter)
 // uses values from original array when making new one
 
+/* 
 const ages = people.map(() => {});
 console.log(ages); // [ undefined, undefined, undefined ]
+*/
+const ages = people.map((a) => {
+  console.log(a);
+  return 'hello world';
+});
+console.log(ages);
