@@ -31,3 +31,10 @@ const menu = [
 
 const categories = ["all", ...new Set(menu.map((item) => item.category))];
 console.log(categories);
+
+const result = document.querySelector('.div');
+
+result.innerHTML = categories.map((item) => {
+  return `<button>${item}</button>`
+})
+.join("");
