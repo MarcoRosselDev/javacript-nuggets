@@ -8,7 +8,9 @@ const people = [
   { name: 'anna', age: 35, position: 'intern'},
 ];
 // filter
-
+const youngPeople = people.filter((a) => a.age < 30);
+console.log(youngPeople); 
+// [ { name: 'bob', age: 20, position: 'developer'},{ name: 'peter', age: 25, position: 'designer'} ];
 // no match
 
 // find
