@@ -22,7 +22,14 @@ console.log(developers);
 const senirDevs = people.filter((item) => item.position === 'seniorDev')
 console.log(senirDevs);
 // []   retorna un objeto vacio.
+
+
 // find ----------------------------------------------
+// find the person peter for axampel:
+const peter = people.filter((person) => person.name === 'peter');
+console.log(peter);
+// [{ name: 'peter', age: 25, position: 'designer'}]
+
 
 // no match ------------------------------------------
 
