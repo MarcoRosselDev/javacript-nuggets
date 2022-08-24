@@ -37,12 +37,12 @@ console.log(fruit); // lemon
 
 
 // no match ------------------------------------------
-const oldPerson = people.find((person) => person.age < 35);
-console.log(oldPerson); // { name: 'bob', age: 20, position: 'developer'}
-// solo retorna el primer match en este caso bob que esta de primero
 const oldPerson2 = people.find((person) => person.age > 35);
 console.log(oldPerson2); // undefined
 // si no hay match retorna undefined
 
 
 // multiple matches - first match
+const oldPerson = people.find((person) => person.age < 35);
+console.log(oldPerson); // { name: 'bob', age: 20, position: 'developer'}
+// solo retorna el primer match en este caso bob que esta de primero
