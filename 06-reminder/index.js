@@ -8,6 +8,10 @@ const ipt = document.querySelector('.ipt');
 const btnPut = document.querySelector('.btn-put');
 const btnClean = document.querySelector('.btn-clean');
 const lis = document.querySelector('.lis');
+let saveArr = [];
 
-
-btnPut.addEventListener('click', () => console.log('clicked test'));
+btnPut.addEventListener('click', () => {
+  saveArr.push(ipt.value);
+  ipt.value = "";
+  console.log(saveArr);
+});
