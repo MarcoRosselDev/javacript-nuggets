@@ -7,6 +7,7 @@ const people = [
   { name: 'susy', age: 30, position: 'the boss'},
   { name: 'anna', age: 35, position: 'intern'},
 ];
+const fruits = ['apple', 'lemon', 'orange'];
 
 
 // filter --------------------------------------------
@@ -26,9 +27,13 @@ console.log(senirDevs);
 
 // find ----------------------------------------------
 // find the person peter for axampel:
-const peter = people.filter((person) => person.name === 'peter');
+const peter = people.find((person) => person.name === 'peter');
 console.log(peter);
-// [{ name: 'peter', age: 25, position: 'designer'}]
+// { name: 'peter', age: 25, position: 'designer'}
+// nos retorna un objeto{}
+const fruit = fruits.find((fruit) => fruit === 'lemon');
+console.log(fruit); // lemon
+// en este caso nos devuelve un array simple ¿...?
 
 
 // no match ------------------------------------------
