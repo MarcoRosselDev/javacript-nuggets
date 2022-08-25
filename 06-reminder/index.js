@@ -31,3 +31,8 @@ btnPut.addEventListener('click', () => {
   printDOM(saveArr)
 });
 
+btnClean.addEventListener('dblclick', function(){
+  localStorage.clear();
+  saveArr = [];
+  printDOM(saveArr);
+})
