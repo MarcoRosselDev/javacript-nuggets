@@ -13,5 +13,14 @@ let saveArr = [];
 btnPut.addEventListener('click', () => {
   saveArr.push(ipt.value);
   ipt.value = "";
-  console.log(saveArr);
+  localStorage.setItem('example', JSON.stringify(saveArr));
+  printDOM(saveArr)
 });
+
+printDOM = (arr) => {
+  let printHtml = '';
+  for (let i = 0; i < arr.length; i++) {
+    printHtml += `<li>${arr[i]}</li>`
+  }
+  return lis.innerHTML = printHtml;
+}
