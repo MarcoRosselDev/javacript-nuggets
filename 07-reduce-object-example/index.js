@@ -24,5 +24,9 @@ const cart = [
   },
 ]
 
-// github repos example
+let total = cart.reduce((total, cartItem)=> {
+  return total;
+}, {})
+console.log(total);
 
+// github repos example
