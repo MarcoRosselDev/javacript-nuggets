@@ -25,8 +25,17 @@ const cart = [
 ]
 
 let total = cart.reduce((total, cartItem)=> {
+  const {amount, price} = cartItem;
+  // count items
+  total.totalItems += amount;
+
+  // count sum
+  total.cartTotal += amount * price;
   return total;
-}, {})
+}, {
+  totalItems: 0,
+  cartTotal: 0
+})
 console.log(total);
 
 // github repos example
