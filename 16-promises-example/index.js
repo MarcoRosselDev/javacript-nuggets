@@ -1,7 +1,10 @@
 const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", () => {
-  addColor(1000, ".first", "red");
+  addColor(1000, ".first", "red")
+    .then(() => addColor(3000, ".second", "blue"))
+    .then(() => addColor(1000, ".third", "orange"))
+    .catch((err) => console.log(err));
 });
 
 function addColor(time, selector, color) {
@@ -12,6 +15,8 @@ function addColor(time, selector, color) {
         element.style.color = color;
         resolve();
       }, time);
+    } else {
+      reject(`There is no such element : "${selector}"`);
     }
   });
 }
