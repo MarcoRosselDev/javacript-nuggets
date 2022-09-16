@@ -4,6 +4,12 @@
 // await waits till promise is settled
 // error handling - try/catch block
 
+const example = async () => {
+  return "hello world";
+};
+
+console.log(example);
+
 const users = [
   { userId: 1, articles: ["one", "two", "three"] },
   { userId: 2, articles: ["four", "five"] },
