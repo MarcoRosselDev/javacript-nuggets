@@ -3,7 +3,8 @@ const btn = document.querySelector(".btn");
 btn.addEventListener("click", () => {
   addColor(1000, ".first", "red")
     .then(() => addColor(3000, ".second", "blue"))
-    .then(() => addColor(1000, ".third", "orange"))
+    .then(() => addColor(1000, ".third", "green"))
+    .then(() => addColor(1000, ".second", "black"))
     .catch((err) => console.log(err));
 });
 
