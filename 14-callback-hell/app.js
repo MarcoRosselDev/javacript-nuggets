@@ -12,5 +12,13 @@ const third = document.querySelector(".third");
 const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", () => {
-  console.log("hello world");
+  setTimeout(() => {
+    first.style.color = "red";
+  }, 1000);
+  setTimeout(() => {
+    second.style.color = "blue";
+  }, 3000);
+  setTimeout(() => {
+    third.style.color = "green";
+  }, 2000);
 });
