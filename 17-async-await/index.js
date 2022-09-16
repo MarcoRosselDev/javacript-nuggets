@@ -25,8 +25,9 @@ const articles = [
   { userId: 3, articles: ["six", "seven", "eight", "nine"] },
 ];
 
-getUser("marco")
-  .then((user) => console.log(user))
+getUser("anna")
+  .then((user) => getArticles(user.id))
+  .then((articles) => console.log(articles))
   .catch((err) => console.log(err));
 
 function getUser(name) {
@@ -42,10 +43,10 @@ function getUser(name) {
 
 function getArticles(userId) {
   return new Promise((resolve, reject) => {
-    const userArticle = article.find((user) => user.userId === userId);
+    const userArticle = articles.find((user) => user.userId === userId);
 
     if (userArticle) {
-      return resolve(userArticle.article);
+      return resolve(userArticle.articles);
     } else {
       reject("Wrong ID");
     }
