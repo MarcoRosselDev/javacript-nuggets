@@ -6,3 +6,11 @@
 // IN SEQUENCE !!!
 
 const first = document.querySelector(".first");
+const second = document.querySelector(".second");
+const third = document.querySelector(".third");
+
+const btn = document.querySelector(".btn");
+
+btn.addEventListener("click", () => {
+  console.log("hello world");
+});
