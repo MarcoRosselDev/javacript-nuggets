@@ -20,3 +20,15 @@ function getUser(name) {
     }
   });
 }
+
+function getArticles(userId) {
+  return new Promise((resolve, reject) => {
+    const userArticle = article.find((user) => user.userId === userId);
+
+    if (userArticle) {
+      return resolve(userArticle.article);
+    } else {
+      reject("Wrong ID");
+    }
+  });
+}
