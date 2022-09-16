@@ -25,7 +25,17 @@ const articles = [
   { userId: 3, articles: ["six", "seven", "eight", "nine"] },
 ];
 
-getUser("anna")
+const getData = async () => {
+  const user = await getUser("anna");
+  if (user) {
+    const articles = await getArticles(user.id);
+    console.log(articles);
+  }
+};
+
+getData();
+
+getUser("john")
   .then((user) => getArticles(user.id))
   .then((articles) => console.log(articles))
   .catch((err) => console.log(err));
