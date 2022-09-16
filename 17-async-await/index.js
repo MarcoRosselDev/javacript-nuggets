@@ -25,6 +25,10 @@ const articles = [
   { userId: 3, articles: ["six", "seven", "eight", "nine"] },
 ];
 
+getUser("marco")
+  .then((user) => console.log(user))
+  .catch((err) => console.log(err));
+
 function getUser(name) {
   return new Promise((resolve, reject) => {
     const user = users.find((user) => user.name === name);
