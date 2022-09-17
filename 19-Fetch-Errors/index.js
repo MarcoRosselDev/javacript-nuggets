@@ -19,3 +19,8 @@ const getTours = async () => {
     console.log(error);
   }
 };
+
+const btn = document.querySelector(".btn");
+btn.addEventListener("click", getTours);
+
+// util cuando nesrcitamos manejar espesificidades en los tipos de errores que se gueneran
